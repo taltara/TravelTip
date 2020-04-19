@@ -9,6 +9,7 @@ export const mainController = {
 window.addEventListener('load', onInit);
 var map;
 var hello;
+var hello;
 
 function onInit() {
     initMap();
