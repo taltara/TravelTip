@@ -10,6 +10,7 @@ window.addEventListener('load', onInit);
 var map;
 var hello;
 var hello;
+var he
 
 function onInit() {
     initMap();
