@@ -1,8 +1,8 @@
 export class LocationPreview {
+    static id = 100;
 
-    constructor(id, location, name, onDeletePlace, onUpdatePlace){
-        
-        this.id = id;
+    constructor(location, name, onDeletePlace, onUpdatePlace){
+        this.id = id++;
         this.lat = location.lat;
         this.lng = location.lng;
         this.name = name;
@@ -10,8 +10,8 @@ export class LocationPreview {
         this.onUpdatePlace = onUpdatePlace;
     }
 
-    render () {
-
+    render() {
+        
         
     }
 }
