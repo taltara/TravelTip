@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>TravelTip</title>
@@ -11,32 +12,38 @@
 
 <body>
 
-    <main class="main-content">
+    <nav class="top-navigation flex space-between align-center">
+        <div class="logo">TravelTip</div>
 
-        <nav class="nav-header flex">
-            <div class="logo">TravelTip</div>
-            <section class="header-location">
-                <div class="search-location">
-                    <input type="text" class="location-input">
-                    <button class="btn btn-go">GO</button>
-                </div>
-                <button class="my-location">My Location</button>
+    </nav>
+    <main class="main-content flex column space-center">
+
+        <header class="info-header">
+
+            <nav class="nav-header flex align-center space-between">
+                <!-- <section class="header-location flex align-center"> -->
+                    <div class="search-location align-center">
+                        <input type="text" class="location-input">
+                        <button class="btn btn-go">GO</button>
+                    </div>
+                    <img src="assets/images/location.png" class="current-location">
+                <!-- </section> -->
+            </nav>
+    
+            <section class="location-data flex space-between">
+                <p class="location-data-p"><span 
+                    class="location-data-p-span">Location:</span>
+                     Central Park, New York</p>
+                <button class="btn location-copy">Copy Location</button>
             </section>
-        </nav>
 
-        <section class="location-data flex">
-            <p class="location-data-p"><span 
-                class="location-data-p-span">Location:</span>
-                 Central Park, New York</p>
-            <button class="btn location-copy">Copy Location</button>
-        </section>
-
-        <main class="main-content flex column">
             <div class="weather">weather</div>
+        </header>
+
+        <main class="main-content-map flex column">
             <section class="map-container">
 
                 <main id="map"></main>
-                <!-- <img src="images/location.png" class="current-location"> -->
             </section>
             <div class="my-locations">
                 <div class="fav-location data-cWE5Fwj7ZV">
