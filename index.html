@@ -4,19 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <title>TravelTip</title>
 </head>
 
 <body>
 
-    <section class="map-container">
+    <main class="main-content">
 
-        <main id="map"></main>
-        <img src="images/location.png" class="current-location" onclick="getPosition()">
-    </section>
+        <nav class="nav-header flex">
+            <div class="logo">TravelTip</div>
+            <section class="header-location">
+                <div class="search-location">
+                    <input type="text" class="location-input">
+                    <button class="btn btn-go">GO</button>
+                </div>
+                <button class="my-location">My Location</button>
+            </section>
+        </nav>
+
+        <section class="location-data flex">
+            <p class="location-data-p"><span 
+                class="location-data-p-span">Location:</span>
+                 Central Park, New York</p>
+            <button class="btn location-copy">Copy Location</button>
+        </section>
+
+        <main class="main-content flex column">
+            <div class="weather">weather</div>
+            <section class="map-container">
+
+                <main id="map"></main>
+                <!-- <img src="images/location.png" class="current-location"> -->
+            </section>
+            <div class="my-locations">
+                <div class="fav-location data-cWE5Fwj7ZV">
+                    <p class="location-name">cvbdvb</p>
+                    <div class="lat-lng">
+                    <div class="coord-block"><span>Lat:</span><p>29.67236951970143</p></div>
+                    <div class="coord-block"><span>Lng:</span><p>34.70333432617188</p></div>
+                    </div>
+                    <i class="fas fa-times" onclick="deleteLocation('cWE5Fwj7ZV')"></i>
+                </div>
+            </div>
+        </main>
+
+    </main>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhs5CgUBpYIb22Hm2DV_ESjLsOKSDnQpU&callback=initMap"
+    
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUold5OSvbCq4dxv7ETQuUeVMqNHP_RlU&callback=initMap"
         async defer></script>
     <script type="module" src="js/main.js"></script>
 </body>
