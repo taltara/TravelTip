@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelTip</title>
+</head>
+
+<body>
+
+    <section class="map-container">
+
+        <main id="map"></main>
+        <img src="images/location.png" class="current-location" onclick="getPosition()">
+    </section>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhs5CgUBpYIb22Hm2DV_ESjLsOKSDnQpU&callback=initMap"
+        async defer></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
