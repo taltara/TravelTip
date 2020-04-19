@@ -8,3 +8,26 @@
     height: 20rem;
     width: 20rem;
 }
+
+/* LAYOUT */
+
+.btn {
+
+
+}
+
+/* HELPERS */
+
+.flex {
+
+    display: flex;
+}
+
+.column {
+
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+}

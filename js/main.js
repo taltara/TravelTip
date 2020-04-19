@@ -40,8 +40,8 @@ function initMap(lat = null, lng = null) {
     map = new google.maps.Map(elMap, options);
 
 
-    // map.addListener('click', function(e) {
+    map.addListener('click', function(e) {
 
-    //     onNewLocation(e);
-    // });
+        onNewLocation(e);
+    });
 }
