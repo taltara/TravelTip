@@ -2,49 +2,52 @@ import { utilService } from './services/util-services.js';
 import { locationServices } from './services/location-services.js';
 import { LocationPreview } from './components/location-preview.js';
 
+export const mainController = {
+    
+}
+
 window.addEventListener('load', onInit);
 var map;
-const KEY = 'locations';
-var gLocations = [];
 
 function onInit() {
     initMap();
     bindEvents();
-    gLocations = getFromStorage(KEY);
-    if (gLocations.length) render();
-    render();
+    locationServices.createLocations();
+    var locations = locationServices.getLocations();
+    if (locations && locations.length) render();
 }
 
 function bindEvents() {
-    document.querySelector('current-location').addEventListener('click', getPosition);
-    document.querySelector('btn-go').addEventListener('click', onSearchLocation);
+    document.querySelector('.current-location').addEventListener('click', locationServices.getPosition);
+    document.querySelector('.btn-go').addEventListener('click', onSearchLocation);
 
 }
 
 function renderCards() {
-
+    const elCardsList = document.querySelector('.my-locations'); 
+    elCardsList.innerHTML = '';
+    var locations = locationServices.getLocations();
+    locations.forEach(location =>{
+        var locationPreview =  new LocationPreview(location,onDeletePlace, onUpdatePlace, initMap);
+        const elLocation = locationPreview.render();
+        elCardsList.appendChild(elLocation);
+    })
 }
 
 function renderLocationInfo() {
 
 }
 
-function render(){
+function render() {
     renderCards();
-    renderLocationInfo();
+    // renderLocationInfo();
 }
 
-function addLocation(res) {
-    var location = new LocationPreview(res.geometry.location, res.formatted_address,
-        onDeletePlace, onUpdatePlace);
-    gLocations.push(location);
-    saveToStorage(KEY, gLocations);
-    location.render();
-}
+
 
 function onSearchLocation() {
     var elSearchValue = document.querySelector('.location-input').value;
-    getLocationData(elSearchValue);
+    locationServices.getLocationData(elSearchValue);
 }
 
 function initMap(lat = null, lng = null) {
@@ -76,3 +79,4 @@ function onDeletePlace() {
 function onUpdatePlace() {
     return;
 }
+

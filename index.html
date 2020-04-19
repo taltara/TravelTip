@@ -22,18 +22,17 @@
 
             <nav class="nav-header flex align-center space-between">
                 <!-- <section class="header-location flex align-center"> -->
-                    <div class="search-location align-center">
-                        <input type="text" class="location-input">
-                        <button class="btn btn-go">GO</button>
-                    </div>
-                    <img src="assets/images/location.png" class="current-location">
+                <div class="search-location align-center">
+                    <input type="text" class="location-input">
+                    <button class="btn btn-go">GO</button>
+                </div>
+                <img src="assets/images/location.png" class="current-location">
                 <!-- </section> -->
             </nav>
-    
+
             <section class="location-data flex space-between">
-                <p class="location-data-p"><span 
-                    class="location-data-p-span">Location:</span>
-                     Central Park, New York</p>
+                <p class="location-data-p"><span class="location-data-p-span">Location:</span>
+                    Central Park, New York</p>
                 <button class="btn location-copy">Copy Location</button>
             </section>
 
@@ -49,8 +48,12 @@
                 <div class="fav-location data-cWE5Fwj7ZV">
                     <p class="location-name">cvbdvb</p>
                     <div class="lat-lng">
-                    <div class="coord-block"><span>Lat:</span><p>29.67236951970143</p></div>
-                    <div class="coord-block"><span>Lng:</span><p>34.70333432617188</p></div>
+                        <div class="coord-block"><span>Lat:</span>
+                            <p>29.67236951970143</p>
+                        </div>
+                        <div class="coord-block"><span>Lng:</span>
+                            <p>34.70333432617188</p>
+                        </div>
                     </div>
                     <i class="fas fa-times" onclick="deleteLocation('cWE5Fwj7ZV')"></i>
                 </div>
@@ -60,11 +63,11 @@
     </main>
 
 
-    
+
 
     <script src="lib/axios.js"></script>
-    <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUold5OSvbCq4dxv7ETQuUeVMqNHP_RlU"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUold5OSvbCq4dxv7ETQuUeVMqNHP_RlU"></script>
     <script type="module" src="js/main.js"></script>
 </body>
 
